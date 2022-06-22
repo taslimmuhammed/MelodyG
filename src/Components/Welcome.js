@@ -74,7 +74,7 @@ const Welcome = () => {
 
               <div className="text-center">
                 <div className='content_main'>MelodyG Price</div>
-                <div className='content_sub  italic'> $10 </div>
+                <div className='content_sub  italic'> $0.5 </div>
 
                 <div className="flex1 mt-3">
 
