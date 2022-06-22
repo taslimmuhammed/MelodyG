@@ -7,7 +7,7 @@ const {ethereum} = window
 
 
 export default function Ethers({children}){
-  const contractAddress = "0x257856a15f3298474692D3A9c61088C408cDcF85"
+  const contractAddress = "0x40F8448966b0FE295D9DCE6F88eBC51327465fFd"
     const [currentAccount, setCurrentAccount] = useState(null);
     const [Stakes, setStakes] = useState();
     const provider = new ethers.providers.Web3Provider(ethereum)
