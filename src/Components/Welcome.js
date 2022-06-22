@@ -76,7 +76,7 @@ const Welcome = () => {
                 <div className='content_main'>MelodyG Price</div>
                 <div className='content_sub  italic'> $10 </div>
 
-                <div className="flex1">
+                <div className="flex1 mt-3">
 
                   <div>
                     <div className='content_main'>Balance</div>
@@ -89,11 +89,11 @@ const Welcome = () => {
                   </div>
                 </div>
 
-                <div className="flex1">
+                <div className="flex1 mt-3">
 
                   <div>
-                    <div className='content_main'>Tax</div>
-                    <div className='content_sub  italic'>{Details && Details[2]} </div>
+                    <div className='content_main'>Staking Balance</div>
+                    <div className='content_sub  italic'>{Stakes?Stakes[0].toNumber():"0"}</div>
                   </div>
 
                   <div>
@@ -103,8 +103,8 @@ const Welcome = () => {
 
                 </div>
 
-                <div className='content_main'>Staking Balance</div>
-                <div className='content_sub  italic'>{Stakes?Stakes[0].toNumber():"0"}</div>
+                {/* <div className='content_main'></div>
+                <div className='content_sub  italic'></div> */}
               </div>
             </div>
           </Col>

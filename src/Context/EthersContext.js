@@ -47,17 +47,21 @@ export default function Ethers({children}){
       try{
          const accounts = await ethereum.request({method: "eth_accounts"})
          const account  = accounts[0]
+         console.log(contract)
          let balance =await contract.balanceOf(account)
          console.log(balance,"balance")
-         let totalSupply =await contract.totalSupply()
-         console.log(totalSupply,"totalSupply")
-         let tax = await contract.tax()
-         console.log(tax,"tax")
-         balance = balance.toNumber()
-         totalSupply = totalSupply.toNumber()
-         tax = tax.toNumber()
-         let arr = [balance, totalSupply, tax]
-         return arr;
+          let totalSupply =await contract.totalSupply()
+        console.log(totalSupply,"totalSupply")
+        //  let tax =await contract.tax()
+        //  console.log(tax,"tax")
+        //  console.log(tax)
+         balance = parseInt(balance._hex, 16)
+         totalSupply = parseInt(totalSupply._hex, 16)
+        //  tax =   parseInt(tax._hex, 16)
+        // console.log(tax,"tex")
+        let arr = [balance, totalSupply/1000/1000/1000/1000/1000/1000]
+        // let arr = [0, 1, tax]
+          return arr;
         }
          catch(e){
          console.log(e)
@@ -167,7 +171,7 @@ export default function Ethers({children}){
     useEffect(() => {
       checkIfWalletIsConnect();
       hasStake()
-     getN()
+      getN()
     }, []);
 
 
