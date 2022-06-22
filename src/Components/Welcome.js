@@ -1,6 +1,7 @@
 import React, { useContext, useEffect,useState } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
-import { SiEthereum } from "react-icons/si";
+// import { SiEthereum } from "react-icons/si";
+import binanc_icon from '../images/binance-logo.png'
 import { BsInfoCircle } from "react-icons/bs";
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Col, Row } from "react-bootstrap";
@@ -39,15 +40,12 @@ const Welcome = () => {
                 <div className="p-3 flex justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card .white-glassmorphism ">
                   <div className="flex justify-between flex-col w-full h-full">
                     <div className="flex justify-between items-start">
-                      <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
-                        <SiEthereum fontSize={21} color="#fff" />
+                      <div className="w-10 h-10  flex justify-center items-center">
+                        <img src={binanc_icon} ></img>
                       </div>
                       <BsInfoCircle fontSize={17} color="#fff" />
                     </div>
                     <div>
-                      <p className="text-white font-light text-sm">
-                        {shortenAddress(currentAccount)}
-                      </p>
                       <p className="text-white font-semibold text-lg mt-1">
                         Binance
                       </p>
@@ -85,7 +83,7 @@ const Welcome = () => {
 
                   <div>
                     <div className='content_main'>Total Supply</div>
-                    <div className='content_sub  italic'> {Details && Details[1]}</div>
+                    <div className='content_sub  italic'> 100 Mlln</div>
                   </div>
                 </div>
 

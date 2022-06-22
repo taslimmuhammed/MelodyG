@@ -50,16 +50,16 @@ export default function Ethers({children}){
          console.log(contract)
          let balance =await contract.balanceOf(account)
          console.log(balance,"balance")
-          let totalSupply =await contract.totalSupply()
-        console.log(totalSupply,"totalSupply")
+        //  let totalSupply =await contract.totalSupply()
+        //console.log(totalSupply,"totalSupply")
         //  let tax =await contract.tax()
         //  console.log(tax,"tax")
         //  console.log(tax)
          balance = parseInt(balance._hex, 16)
-         totalSupply = parseInt(totalSupply._hex, 16)
+       // totalSupply = parseInt(totalSupply._hex, 16)
         //  tax =   parseInt(tax._hex, 16)
         // console.log(tax,"tex")
-        let arr = [balance, totalSupply/1000/1000/1000/1000/1000/1000]
+        let arr = [balance]
         // let arr = [0, 1, tax]
           return arr;
         }
